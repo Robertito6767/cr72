@@ -263,7 +263,7 @@ st.markdown("""
 <hr class="gold-line">
 """, unsafe_allow_html=True)
 
-# Imagen de CR7 — st.image es más confiable en Streamlit que HTML img
+# Imagen de CR7 — img_path = "CR7.jpeg"
 col_img_l, col_img_c, col_img_r = st.columns([1, 2, 1])
 with col_img_c:
     st.image(
