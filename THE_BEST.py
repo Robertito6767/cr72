@@ -1,4 +1,4 @@
-pimport streamlit as st
+import streamlit as st
 import random
 
 # ── Configuración de página ──────────────────────────────────────────────────
