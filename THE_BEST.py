@@ -263,17 +263,14 @@ st.markdown("""
 <hr class="gold-line">
 """, unsafe_allow_html=True)
 
-# Imagen de CR7
-st.markdown("""
-<div class="cr7-photo-wrap">
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/800px-Cristiano_Ronaldo_2018.jpg"
-    alt="Cristiano Ronaldo"
-    width="340"
-  />
-  <p class="cr7-photo-caption">Cristiano Ronaldo · Portugal · #7</p>
-</div>
-""", unsafe_allow_html=True)
+# Imagen de CR7 — st.image es más confiable en Streamlit que HTML img
+col_img_l, col_img_c, col_img_r = st.columns([1, 2, 1])
+with col_img_c:
+    st.image(
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_crop.jpg/800px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_crop.jpg",
+        caption="Cristiano Ronaldo · Al-Nassr · #7",
+        use_container_width=True,
+    )
 
 # Stats row
 cols_stats = "".join(
@@ -330,7 +327,7 @@ st.markdown("""
   <h2>🎬 VER LOS MEJORES CLIPS DE CR7</h2>
   <p>Goles imposibles, regates imposibles, momentos que quedaron en la historia del fútbol</p>
   <a class="video-btn"
-     href="https://www.youtube.com/watch?v=GCHAc08V4rA"
+     href="https://www.youtube.com/watch?v=1RFA9B5dGxw"
      target="_blank"
      rel="noopener noreferrer">
     ▶ &nbsp; VER VIDEO EN YOUTUBE
@@ -345,3 +342,4 @@ st.markdown("""
   ⚽ &nbsp; CR7 · Madeira, 1985 &nbsp;·&nbsp; SIUUU &nbsp;·&nbsp; Hecho con Python & Streamlit
 </div>
 """, unsafe_allow_html=True)
+
