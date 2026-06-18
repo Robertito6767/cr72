@@ -141,6 +141,63 @@ st.markdown("""
     margin-top: 0.15rem;
   }
 
+  /* Imagen CR7 */
+  .cr7-photo-wrap {
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+  .cr7-photo-wrap img {
+    border-radius: 12px;
+    border: 3px solid rgba(200,168,75,0.4);
+    max-width: 100%;
+    box-shadow: 0 8px 40px rgba(200,168,75,0.15);
+  }
+  .cr7-photo-caption {
+    font-size: 0.78rem;
+    color: #a89060;
+    margin-top: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* Video banner */
+  .video-banner {
+    background: linear-gradient(135deg, rgba(200,168,75,0.12), rgba(200,168,75,0.04));
+    border: 1px solid rgba(200,168,75,0.35);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    margin: 2rem 0 1rem;
+  }
+  .video-banner h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #ffe680;
+    letter-spacing: 0.12em;
+    margin: 0 0 0.5rem;
+  }
+  .video-banner p {
+    color: #a89060;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+  .video-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #c8a84b, #ffe680);
+    color: #0a0a0a !important;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
+    padding: 0.7rem 2.2rem;
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .video-btn:hover {
+    opacity: 0.85;
+    transform: scale(1.04);
+    text-decoration: none !important;
+  }
+
   /* Footer */
   .cr7-footer {
     text-align: center;
@@ -206,6 +263,18 @@ st.markdown("""
 <hr class="gold-line">
 """, unsafe_allow_html=True)
 
+# Imagen de CR7
+st.markdown("""
+<div class="cr7-photo-wrap">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/800px-Cristiano_Ronaldo_2018.jpg"
+    alt="Cristiano Ronaldo"
+    width="340"
+  />
+  <p class="cr7-photo-caption">Cristiano Ronaldo · Portugal · #7</p>
+</div>
+""", unsafe_allow_html=True)
+
 # Stats row
 cols_stats = "".join(
     f'<div class="stat-card"><div class="num">{n}</div><div class="lbl">{l}</div></div>'
@@ -253,6 +322,21 @@ with col2:
             f'</div>',
             unsafe_allow_html=True,
         )
+
+# ── Sección de video ──────────────────────────────────────────────────────────
+st.markdown("""
+<hr class="gold-line">
+<div class="video-banner">
+  <h2>🎬 VER LOS MEJORES CLIPS DE CR7</h2>
+  <p>Goles imposibles, regates imposibles, momentos que quedaron en la historia del fútbol</p>
+  <a class="video-btn"
+     href="https://www.youtube.com/watch?v=GCHAc08V4rA"
+     target="_blank"
+     rel="noopener noreferrer">
+    ▶ &nbsp; VER VIDEO EN YOUTUBE
+  </a>
+</div>
+""", unsafe_allow_html=True)
 
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("""
