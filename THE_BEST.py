@@ -1,4 +1,4 @@
-import streamlit as st
+pimport streamlit as st
 import random
 
 # ── Configuración de página ──────────────────────────────────────────────────
@@ -327,7 +327,7 @@ st.markdown("""
   <h2>🎬 VER LOS MEJORES CLIPS DE CR7</h2>
   <p>Goles imposibles, regates imposibles, momentos que quedaron en la historia del fútbol</p>
   <a class="video-btn"
-     href="https://www.youtube.com/watch?v=1RFA9B5dGxw"
+     href="https://www.youtube.com/watch?v=mmeLCAP74KA"
      target="_blank"
      rel="noopener noreferrer">
     ▶ &nbsp; VER VIDEO EN YOUTUBE
