@@ -263,14 +263,15 @@ st.markdown("""
 <hr class="gold-line">
 """, unsafe_allow_html=True)
 
-# Imagen de CR7 — img_path = "CR7.jpeg"
+# Imagen de CR7 — cargada desde el repositorio local
+import os
 col_img_l, col_img_c, col_img_r = st.columns([1, 2, 1])
 with col_img_c:
-    st.image(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_crop.jpg/800px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_crop.jpg",
-        caption="Cristiano Ronaldo · Al-Nassr · #7",
-        use_container_width=True,
-    )
+    img_path = "CR7.jpeg"
+    if os.path.exists(img_path):
+        st.image(img_path, caption="Cristiano Ronaldo · Manchester United · #7", use_container_width=True)
+    else:
+        st.warning("⚠️ Falta la imagen CR7.jpeg en el repositorio.")
 
 # Stats row
 cols_stats = "".join(
@@ -327,7 +328,7 @@ st.markdown("""
   <h2>🎬 VER LOS MEJORES CLIPS DE CR7</h2>
   <p>Goles imposibles, regates imposibles, momentos que quedaron en la historia del fútbol</p>
   <a class="video-btn"
-     href="https://www.youtube.com/watch?v=mmeLCAP74KA"
+     href="https://www.youtube.com/watch?v=1RFA9B5dGxw"
      target="_blank"
      rel="noopener noreferrer">
     ▶ &nbsp; VER VIDEO EN YOUTUBE
@@ -342,4 +343,3 @@ st.markdown("""
   ⚽ &nbsp; CR7 · Madeira, 1985 &nbsp;·&nbsp; SIUUU &nbsp;·&nbsp; Hecho con Python & Streamlit
 </div>
 """, unsafe_allow_html=True)
-
